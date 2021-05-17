@@ -1,7 +1,17 @@
 {
   "name": "implementation-2",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Implementation 2 for Acceptto Homework Project",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jarrodplacide/acceptto-implementation-2-vue.git"
+  },
   "private": true,
+  "author": {
+    "name": "Jarrod Placide-Raymond",
+    "email": "contact@jarrodplacide.com",
+    "url": "jarrodplacide.com"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
