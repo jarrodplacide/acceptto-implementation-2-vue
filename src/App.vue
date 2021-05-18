@@ -23,10 +23,7 @@ export default {
   },
   data() {
     return {
-      emails: [
-          'test@gmail.com',
-          "jpraymond400@gmail.com"
-      ]
+      emails: []
     }
   },
   methods: {
