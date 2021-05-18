@@ -1,17 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js Application"/>
+    <EmailInput
+        introduction="Welcome. Please enter an e-mail below"
+        @add-email="addEmail"
+    />
+    <EmailList v-bind:emails="emails"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import EmailInput from './components/EmailInput.vue'
+import EmailList from "./components/EmailList.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    EmailInput,
+    EmailList
+  },
+  data() {
+    return {
+      emails: [
+          'test@gmail.com',
+          "test@gmail.com"
+      ]
+    }
+  },
+  methods: {
+    addEmail: function(newEmail) {
+      this.emails.push(newEmail);
+    }
   }
 }
 </script>
