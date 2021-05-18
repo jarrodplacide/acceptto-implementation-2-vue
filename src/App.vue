@@ -2,13 +2,16 @@
   <div id="app">
     <EmailInput
         introduction="Welcome. Please enter an e-mail below"
+        v-bind:emails="emails"
         @add-email="addEmail"
+        @remove-email="removeEmail"
     />
     <EmailList v-bind:emails="emails"/>
   </div>
 </template>
 
 <script>
+
 import EmailInput from './components/EmailInput.vue'
 import EmailList from "./components/EmailList.vue";
 
@@ -22,13 +25,16 @@ export default {
     return {
       emails: [
           'test@gmail.com',
-          "test@gmail.com"
+          "jpraymond400@gmail.com"
       ]
     }
   },
   methods: {
     addEmail: function(newEmail) {
       this.emails.push(newEmail);
+    },
+    removeEmail: function(existingEmail) {
+      this.emails = this.emails.filter( value => value !== existingEmail)
     }
   }
 }
